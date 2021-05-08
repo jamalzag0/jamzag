@@ -2,7 +2,7 @@
   "name": "CovidVac",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jamalzag0.github.io/CovidVac",
+  "homepage": "http://jamalzag0.github.io/jamzag",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
