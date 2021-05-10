@@ -143,7 +143,7 @@ const Covid19 = () => {
         </div>
 
         <div className="col-lg-9">
-          <h5>Click on any country on the map to see more...</h5>
+          <h6>Click on any country on the map below for more details...</h6>
           <CovidZones />
           {countries.length === 0 ? (
             <CovidLoading />
