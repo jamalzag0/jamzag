@@ -7,6 +7,7 @@ import { getCentroid, processCovidVaccineData } from "../tasks/CommonUtils";
 import CovidZones from "./CovidZones";
 import CovidPieChart from "./CovidPieChart";
 import Worldflags from "../resources/images/Worldflags.png";
+import CovidPieChartZones from "./CovidPieChartZones";
 
 const Covid19 = () => {
   const [countries, setCountries] = useState([]);
@@ -143,6 +144,17 @@ const Covid19 = () => {
         </div>
 
         <div className="col-lg-9">
+          <CovidPieChartZones />
+          {selectedValues.population === 0 ? (
+            <div />
+          ) : (
+            <CovidPieChart covidChartData={chartData}></CovidPieChart>
+          )}
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col-lg-12">
           <h6>Click on any country on the map below for more details...</h6>
           <CovidZones />
           {countries.length === 0 ? (
@@ -151,14 +163,6 @@ const Covid19 = () => {
             <CovidMap countries={countries} selectedValues={selectedValues} />
           )}
         </div>
-      </div>
-
-      <div className="row">
-        {selectedValues.population === 0 ? (
-          <div />
-        ) : (
-          <CovidPieChart covidChartData={chartData}></CovidPieChart>
-        )}
       </div>
     </div>
   );
