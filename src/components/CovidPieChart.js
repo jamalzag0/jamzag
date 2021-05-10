@@ -12,9 +12,9 @@ function CovidPieChart({ covidChartData }) {
         nameKey="name"
         isAnimationActive={false}
         data={covidChartData}
-        cx={180}
+        cx={170}
         cy={150}
-        outerRadius={120}
+        outerRadius={80}
         fill="#8884d8"
       >
         {covidChartData.map((e, index) => (
