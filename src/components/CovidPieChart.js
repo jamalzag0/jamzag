@@ -12,10 +12,7 @@ function CovidPieChart({ covidChartData }) {
         nameKey="name"
         isAnimationActive={false}
         data={covidChartData}
-        cx={170}
-        cy={150}
-        outerRadius={80}
-        fill="#8884d8"
+        outerRadius={90}
       >
         {covidChartData.map((e, index) => (
           <Cell key={index} fill={COLORS[index % COLORS.length]} />
